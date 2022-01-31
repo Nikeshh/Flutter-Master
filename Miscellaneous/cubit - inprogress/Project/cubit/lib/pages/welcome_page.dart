@@ -60,8 +60,13 @@ class _WelcomePageState extends State<WelcomePage> {
                         ),
                       ),
                       SizedBox(height: 40),
-                      ResponsiveButton(),
+                      ResponsiveButton(width: 120,),
                     ],
+                  ),
+                  Column(
+                    children: List.generate(3, (index) {
+                      return Container();
+                    }),
                   ),
                 ],
               ),
