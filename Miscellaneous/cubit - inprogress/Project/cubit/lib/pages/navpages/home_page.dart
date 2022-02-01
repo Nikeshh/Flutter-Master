@@ -2,6 +2,7 @@
 
 import 'package:cubit/misc/colors.dart';
 import 'package:cubit/widgets/app_large_text.dart';
+import 'package:cubit/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -100,10 +101,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           SizedBox(height: 30),
-          Row(
-            children: [
-              AppLargeText(text: "Explore more", size: 22),
-            ],
+          Container(
+            margin: const EdgeInsets.only(left: 20, right: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                AppLargeText(text: "Explore more", size: 22),
+                AppText(text: "See all", color: AppColors.textColor1),
+              ],
+            )
           ),
         ],
       ),
