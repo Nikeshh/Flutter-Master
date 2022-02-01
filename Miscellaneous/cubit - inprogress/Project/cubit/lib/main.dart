@@ -1,3 +1,4 @@
+import 'package:cubit/pages/detail_page.dart';
 import 'package:cubit/pages/navpages/main_page.dart';
 import 'package:cubit/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainPage()
+      home: DetailPage()
     );
   }
 

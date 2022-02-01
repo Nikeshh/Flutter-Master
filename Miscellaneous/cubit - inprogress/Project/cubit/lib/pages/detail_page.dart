@@ -11,9 +11,13 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        
-      ),
+      body: Container(
+        width: double.maxFinite,
+        height: double.maxFinite,
+        child: Stack(
+
+        ),
+      )
     );
   }
 }
