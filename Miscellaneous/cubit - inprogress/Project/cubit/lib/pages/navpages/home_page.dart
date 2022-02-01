@@ -49,6 +49,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           Container(
             child: TabBar(
               controller: _tabController,
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.grey,
               tabs: [
                 Tab(text: "Places"),
                 Tab(text: "Inspiration"),
