@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
@@ -29,7 +31,22 @@ class _DetailPageState extends State<DetailPage> {
                   )
                 ],
               ),
-            )
+            ),
+            Positioned(
+              left: 0,
+              right: 0,
+              child: Container(
+                width: double.maxFinite,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "img/mountain.jpeg",
+                    )
+                  )
+                ),
+              ),
+            ),
           ],
         ),
       )
