@@ -13,6 +13,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+
+  var images = {
+    "balloning.png": "Balloning",
+    "hiking.png": "Hiking",
+    "kayaking.png": "Kayaking",
+    "snorkling.png": "Snorkling",
+  };
+
   @override
   Widget build(BuildContext context) {
 
@@ -42,12 +50,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ],
             ),
           ),
-          SizedBox(height: 40),
+          SizedBox(height: 30),
           Container(
             margin: const EdgeInsets.only(left: 20),
             child: AppLargeText(text: "Discover"),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 20),
           Container(
             child: Align(
               alignment: Alignment.centerLeft,
@@ -113,7 +121,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
           SizedBox(height: 10),
           Container(
-            height: 100,
+            height: 120,
             width: double.maxFinite,
             margin: const EdgeInsets.only(left: 20),
             child: ListView.builder(
@@ -134,15 +142,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           color: Colors.white,
                           image: DecorationImage(
                             image: AssetImage(
-                              "img/mountain.jpeg"
+                              "img/" + images.keys.elementAt(index)
                             ),
                             fit: BoxFit.cover,
                           )
                         ),
                       ),
+                      SizedBox(height: 10),
                       Container(
                         child: AppText(
-                          text: "Kayaking",
+                          text: images.values.elementAt(index),
                           color: AppColors.textColor2,
                         ),
                       ),
