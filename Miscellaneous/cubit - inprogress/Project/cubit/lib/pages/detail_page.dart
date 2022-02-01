@@ -15,7 +15,22 @@ class _DetailPageState extends State<DetailPage> {
         width: double.maxFinite,
         height: double.maxFinite,
         child: Stack(
+          children: [
+            Positioned(
+              left: 20,
+              top: 70,
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
 
+                    },
+                    icon: Icon(Icons.menu),
+                  )
+                ],
+              ),
+            )
+          ],
         ),
       )
     );
