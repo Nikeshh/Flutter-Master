@@ -99,6 +99,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ],
             ),
           ),
+          SizedBox(height: 30),
+          Row(
+            children: [
+              AppLargeText(text: "Explore more", size: 22),
+            ],
+          ),
         ],
       ),
     );
