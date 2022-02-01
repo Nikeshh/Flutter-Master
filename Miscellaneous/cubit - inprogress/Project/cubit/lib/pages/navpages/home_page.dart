@@ -120,30 +120,34 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               itemCount: 4,
               scrollDirection: Axis.horizontal,
               itemBuilder: (_, index) {
-                return Column(
-                  children: [
-                    Container(
-                      // margin: const EdgeInsets.only(right: 50),
-                      width: 80,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage(
-                            "img/mountain.jpeg"
-                          ),
-                          fit: BoxFit.cover,
-                        )
+                return Container(
+                  margin: const EdgeInsets.only(right: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        // margin: const EdgeInsets.only(right: 50),
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "img/mountain.jpeg"
+                            ),
+                            fit: BoxFit.cover,
+                          )
+                        ),
                       ),
-                    ),
-                    Container(
-                      child: AppText(
-                        text: "Kayaking",
-                        color: AppColors.textColor2,
+                      Container(
+                        child: AppText(
+                          text: "Kayaking",
+                          color: AppColors.textColor2,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 );
               }
             ),
