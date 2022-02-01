@@ -72,18 +72,25 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: TabBarView(
               controller: _tabController,
               children: [
-                Container(
-                  width: 200,
-                  height: 300,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "img/mountain.jpeg"
+                ListView.builder(
+                  itemCount: 3,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      width: 200,
+                      height: 300,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "img/mountain.jpeg"
+                          ),
+                          fit: BoxFit.cover,
+                        )
                       ),
-                    )
-                  ),
+                    );   
+                  },
                 ),
                 Text("There"),
                 Text("Bye"),
