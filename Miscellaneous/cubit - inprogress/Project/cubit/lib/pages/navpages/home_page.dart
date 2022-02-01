@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:cubit/widgets/app_large_text.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             padding: const EdgeInsets.only(top: 70, left: 20),
@@ -24,6 +26,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(),
                 ),
                 Container(
+                  margin: const EdgeInsets.only(right: 20),
                   width: 50,
                   height: 50,
                   decoration: BoxDecoration(
@@ -33,6 +36,11 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+          ),
+          SizedBox(height: 40),
+          Container(
+            margin: const EdgeInsets.only(left: 20),
+            child: AppLargeText(text: "Discover"),
           ),
         ],
       ),
