@@ -36,7 +36,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
             Positioned(
               left: 20,
-              top: 70,
+              top: 50,
               child: Row(
                 children: [
                   IconButton(
@@ -44,6 +44,7 @@ class _DetailPageState extends State<DetailPage> {
 
                     },
                     icon: Icon(Icons.menu),
+                    color: Colors.white,
                   )
                 ],
               ),
