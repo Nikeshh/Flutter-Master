@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:cubit/misc/colors.dart';
+import 'package:cubit/widgets/app_buttons.dart';
 import 'package:cubit/widgets/app_large_text.dart';
 import 'package:cubit/widgets/app_text.dart';
 import 'package:flutter/material.dart';
@@ -104,14 +105,7 @@ class _DetailPageState extends State<DetailPage> {
                     AppText(text: "Number of people in your group", color: AppColors.mainTextColor),
                     Wrap(
                       children: List.generate(5, (index) {
-                        return Container(
-                          width: 60,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: AppColors.buttonBackground
-                          ),
-                        );
+                        return AppButtons();
                       }),
                     ),
                   ],
