@@ -66,6 +66,7 @@ class _DetailPageState extends State<DetailPage> {
                   )
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -80,6 +81,18 @@ class _DetailPageState extends State<DetailPage> {
                         Icon(Icons.location_on, color: AppColors.mainColor),
                         SizedBox(width: 5),
                         AppText(text: "USA, California", color: AppColors.textColor1),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+                    Row(
+                      children: [
+                        Wrap(
+                          children: List.generate(5, (index) {
+                            return Icon(Icons.star, color: AppColors.starColor);
+                          }),
+                        ),
+                        SizedBox(width: 10),
+                        AppText(text: "(4.0)", color: AppColors.textColor2),
                       ],
                     ),
                   ],
