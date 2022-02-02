@@ -15,7 +15,7 @@ class AppButtons extends StatelessWidget {
   AppButtons({ 
     Key? key,
     this.isIcon = false,
-    this.text = "Hi",
+    this.text,
     this.icon,
     required this.size,
     required this.color,
