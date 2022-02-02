@@ -19,6 +19,22 @@ class _DetailPageState extends State<DetailPage> {
         child: Stack(
           children: [
             Positioned(
+              left: 0,
+              right: 0,
+              child: Container(
+                width: double.maxFinite,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "img/mountain.jpeg",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
               left: 20,
               top: 70,
               child: Row(
@@ -30,21 +46,6 @@ class _DetailPageState extends State<DetailPage> {
                     icon: Icon(Icons.menu),
                   )
                 ],
-              ),
-            ),
-            Positioned(
-              left: 0,
-              right: 0,
-              child: Container(
-                width: double.maxFinite,
-                height: 300,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "img/mountain.jpeg",
-                    )
-                  )
-                ),
               ),
             ),
           ],
