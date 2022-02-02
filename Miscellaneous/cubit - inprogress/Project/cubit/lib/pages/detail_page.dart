@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:cubit/widgets/app_large_text.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
@@ -50,8 +51,9 @@ class _DetailPageState extends State<DetailPage> {
               ),
             ),
             Positioned(
-              top: 330,
+              top: 320,
               child: Container(
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
                 width: MediaQuery.of(context).size.width,
                 height: 500,
                 decoration: BoxDecoration(
@@ -60,6 +62,17 @@ class _DetailPageState extends State<DetailPage> {
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   )
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppLargeText(text: "Yosemite"),
+                        AppLargeText(text: "\$ 250")
+                      ],
+                    )
+                  ],
                 ),
               ),
             ),
