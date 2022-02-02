@@ -19,11 +19,15 @@ class AppButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 60,
-      height: 60,
+      width: size,
+      height: size,
       decoration: BoxDecoration(
+        border: Border.all(
+          color: borderColor,
+          width: 1.0,
+        ),
         borderRadius: BorderRadius.circular(15),
-        color: AppColors.buttonBackground
+        color: backgroundColor
       ),
     );
   }
