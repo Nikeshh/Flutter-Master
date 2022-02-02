@@ -110,6 +110,7 @@ class _DetailPageState extends State<DetailPage> {
                           color: Colors.black,
                           backgroundColor: AppColors.buttonBackground,
                           borderColor: AppColors.buttonBackground,
+                          text: (index + 1).toString(),
                         );
                       }),
                     ),
