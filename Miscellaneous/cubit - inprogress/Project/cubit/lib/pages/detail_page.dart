@@ -13,6 +13,9 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+
+  int gottenStars = 4;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +91,7 @@ class _DetailPageState extends State<DetailPage> {
                       children: [
                         Wrap(
                           children: List.generate(5, (index) {
-                            return Icon(Icons.star, color: AppColors.starColor);
+                            return Icon(Icons.star, color: index < gottenStars ? AppColors.starColor : AppColors.textColor2);
                           }),
                         ),
                         SizedBox(width: 10),
