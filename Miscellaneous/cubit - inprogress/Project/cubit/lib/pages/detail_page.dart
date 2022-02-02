@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:cubit/misc/colors.dart';
 import 'package:cubit/widgets/app_large_text.dart';
+import 'package:cubit/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
@@ -68,10 +70,18 @@ class _DetailPageState extends State<DetailPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        AppLargeText(text: "Yosemite"),
-                        AppLargeText(text: "\$ 250")
+                        AppLargeText(text: "Yosemite", color: Colors.black.withOpacity(0.8)),
+                        AppLargeText(text: "\$ 250", color: AppColors.mainColor),
                       ],
-                    )
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Icon(Icons.location_on, color: AppColors.mainColor),
+                        SizedBox(width: 5),
+                        AppText(text: "USA, California", color: AppColors.textColor1),
+                      ],
+                    ),
                   ],
                 ),
               ),
