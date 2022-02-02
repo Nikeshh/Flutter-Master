@@ -103,6 +103,7 @@ class _DetailPageState extends State<DetailPage> {
                     AppLargeText(text: "People", color: Colors.black.withOpacity(0.8), size: 20),
                     SizedBox(height: 5),
                     AppText(text: "Number of people in your group", color: AppColors.mainTextColor),
+                    SizedBox(height: 10),
                     Wrap(
                       children: List.generate(5, (index) {
                         return Container(
