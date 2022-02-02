@@ -23,7 +23,7 @@ class _DetailPageState extends State<DetailPage> {
               right: 0,
               child: Container(
                 width: double.maxFinite,
-                height: 300,
+                height: 350,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
@@ -47,6 +47,11 @@ class _DetailPageState extends State<DetailPage> {
                     color: Colors.white,
                   )
                 ],
+              ),
+            ),
+            Positioned(
+              child: Container(
+                
               ),
             ),
           ],
