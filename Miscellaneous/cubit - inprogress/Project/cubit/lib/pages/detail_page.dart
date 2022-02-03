@@ -16,6 +16,7 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
 
   int gottenStars = 4;
+  int selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -106,20 +107,44 @@ class _DetailPageState extends State<DetailPage> {
                     SizedBox(height: 10),
                     Wrap(
                       children: List.generate(5, (index) {
-                        return Container(
-                          margin: const EdgeInsets.only(right: 10),
-                          child: AppButtons(
-                            size: 50,
-                            color: Colors.black,
-                            backgroundColor: AppColors.buttonBackground,
-                            borderColor: AppColors.buttonBackground,
-                            text: (index + 1).toString(),
+                        return InkWell(
+                          onTap: () {
+                            setState(() {
+                              selectedIndex = index;
+                            });
+                          },
+                          child: Container(
+                            margin: const EdgeInsets.only(right: 10),
+                            child: AppButtons(
+                              size: 50,
+                              color: selectedIndex == index ? Colors.white : Colors.black,
+                              backgroundColor: selectedIndex == index ? Colors.black : AppColors.buttonBackground,
+                              borderColor: selectedIndex == index ? Colors.black : AppColors.buttonBackground,
+                              text: (index + 1).toString(),
+                            ),
                           ),
                         );
                       }),
                     ),
+                    SizedBox(height: 20),
+                    AppLargeText(text: "Description", color: Colors.black.withOpacity(0.8), size: 20),
+                    SizedBox(height: 10),
+                    AppText(text: "You must go for a travel. Travelling helps get rid of pressure. Go to te mountains to see the nature.", color: AppColors.mainTextColor),
                   ],
                 ),
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              child: Row(
+                children: [
+                  AppButtons(
+                    size: 60,
+                    color: AppColors.textColor2,
+                    backgroundColor: Colors.white,
+                    borderColor: AppColors.textColor2,
+                  ),
+                ],
               ),
             ),
           ],
